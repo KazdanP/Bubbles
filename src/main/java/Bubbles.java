@@ -44,7 +44,6 @@ public class Bubbles {
 
     for (int i = 0; i < combinedLength; i++) {
 
-      //region Check empty array yucky IF
       if (secondCounter == secondLength) {
         combinedArray[i] = firstArray[firstCounter];
         firstCounter++;
@@ -54,7 +53,6 @@ public class Bubbles {
         secondCounter++;
         continue;
       }
-      //endregion
 
       int firstNumber = firstArray[firstCounter];
       int secondNumber = secondArray[secondCounter];
