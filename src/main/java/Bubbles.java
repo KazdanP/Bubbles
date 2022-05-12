@@ -14,21 +14,61 @@ public class Bubbles {
         int second = toSort[i + 1];
 
         if (first > second) {
-          toSort[i]  = second;
+          toSort[i] = second;
           toSort[i + 1] = first;
           swapped = true;
         }
 
         runCounter++;
       }
-
       //Checks if nothing has been swapped i.e. already in the correct order
-      if (!swapped) { break; }
+      if (!swapped) {
+        break;
+      }
     }
 
     System.out.println("Times ran: " + runCounter);
 
     return toSort;
+  }
+
+  public static int[] doubleBubble(int[] firstArray, int[] secondArray) {
+
+    int firstLength = firstArray.length;
+    int secondLength = secondArray.length;
+    int combinedLength = firstArray.length + secondArray.length;
+    int[] combinedArray = new int[combinedLength];
+
+    int firstCounter = 0;
+    int secondCounter = 0;
+
+    for (int i = 0; i < combinedLength; i++) {
+
+      //region Check empty array yucky IF
+      if (secondCounter == secondLength) {
+        combinedArray[i] = firstArray[firstCounter];
+        firstCounter++;
+        continue;
+      } else if (firstCounter == firstLength) {
+        combinedArray[i] = secondArray[secondCounter];
+        secondCounter++;
+        continue;
+      }
+      //endregion
+
+      int firstNumber = firstArray[firstCounter];
+      int secondNumber = secondArray[secondCounter];
+
+      if (firstNumber > secondNumber) {
+        combinedArray[i] = secondNumber;
+        secondCounter++;
+      } else {
+        combinedArray[i] = firstNumber;
+        firstCounter++;
+      }
+    }
+
+    return combinedArray;
   }
 
 }
