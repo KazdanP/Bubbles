@@ -2,36 +2,6 @@ import java.util.Arrays;
 
 public class Sorter {
 
-  public static int[] bubbles(int[] toSort) {
-
-    int runCounter = 1;
-    boolean swapped;
-
-    for (int j = 0; j <= toSort.length; j++) {
-
-      swapped = false;
-
-      for (int i = 0; i < toSort.length - 1 - j; i++) {
-        int first = toSort[i];
-        int second = toSort[i + 1];
-
-        if (first > second) {
-          toSort[i] = second;
-          toSort[i + 1] = first;
-          swapped = true;
-        }
-
-        runCounter++;
-      }
-      //Checks if nothing has been swapped i.e. already in the correct order
-      if (!swapped) { break; }
-    }
-
-    System.out.println("Times ran: " + runCounter);
-
-    return toSort;
-  }
-
   public static int[] sortSorted(int[] firstArray, int[] secondArray) {
 
     int combinedLength = firstArray.length + secondArray.length;
@@ -62,7 +32,7 @@ public class Sorter {
 
     int toSortLength = toSort.length;
 
-    // Split array into smaller arrays
+    // Split array into smaller, single length arrays
     int[][] splitArray = new int[toSortLength][1];
 
     for (int i = 0; i < toSortLength; i++) { splitArray[i][0] = toSort[i]; }
@@ -74,6 +44,7 @@ public class Sorter {
 
     return blah;
   }
+
 
   //TODO Rewrite this recursion to work with 1k length array
   public static int[] mergeSort(int[][] inArray) {
@@ -92,6 +63,7 @@ public class Sorter {
     for (int i = 0, j = 0; i < newArray.length; i++, j+=2) {
       newArray[i] = sortSorted(inArray[j], inArray[j+1]);
     }
+
     return mergeSort(newArray);
 
   }
