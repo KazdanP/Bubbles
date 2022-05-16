@@ -22,9 +22,7 @@ public class Bubbles {
         runCounter++;
       }
       //Checks if nothing has been swapped i.e. already in the correct order
-      if (!swapped) {
-        break;
-      }
+      if (!swapped) { break; }
     }
 
     System.out.println("Times ran: " + runCounter);
