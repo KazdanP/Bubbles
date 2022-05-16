@@ -1,6 +1,8 @@
-public class Bubbles {
+import java.util.Arrays;
 
-  public static int[] bubbleBubbles(int[] toSort) {
+public class Sorter {
+
+  public static int[] bubbles(int[] toSort) {
 
     int runCounter = 1;
     boolean swapped;
@@ -30,10 +32,8 @@ public class Bubbles {
     return toSort;
   }
 
-  public static int[] doubleBubble(int[] firstArray, int[] secondArray) {
+  public static int[] sortSorted(int[] firstArray, int[] secondArray) {
 
-    int firstLength = firstArray.length;
-    int secondLength = secondArray.length;
     int combinedLength = firstArray.length + secondArray.length;
     int[] combinedArray = new int[combinedLength];
 
@@ -42,29 +42,58 @@ public class Bubbles {
 
     for (int i = 0; i < combinedLength; i++) {
 
-      if (secondCounter == secondLength) {
+      if (secondCounter == secondArray.length) {
         combinedArray[i] = firstArray[firstCounter];
         firstCounter++;
-        continue;
-      } else if (firstCounter == firstLength) {
+      } else if ((firstCounter == firstArray.length) || (firstArray[firstCounter] > secondArray[secondCounter])) {
         combinedArray[i] = secondArray[secondCounter];
         secondCounter++;
-        continue;
-      }
-
-      int firstNumber = firstArray[firstCounter];
-      int secondNumber = secondArray[secondCounter];
-
-      if (firstNumber > secondNumber) {
-        combinedArray[i] = secondNumber;
-        secondCounter++;
       } else {
-        combinedArray[i] = firstNumber;
+        combinedArray[i] = firstArray[firstCounter];
         firstCounter++;
       }
     }
 
     return combinedArray;
+  }
+
+  public static int[] mergerine(int[] toSort) {
+    if (toSort.length < 1) { return toSort; }
+
+    int toSortLength = toSort.length;
+
+    // Split array into smaller arrays
+    int[][] splitArray = new int[toSortLength][1];
+
+    for (int i = 0; i < toSortLength; i++) { splitArray[i][0] = toSort[i]; }
+
+    System.out.println(splitArray.length);
+
+    int[] blah = mergeSort(splitArray);
+    System.out.println(blah.length);
+
+    return blah;
+  }
+
+  //TODO Rewrite this recursion to work with 1k length array
+  public static int[] mergeSort(int[][] inArray) {
+
+    int arrayLength = inArray.length;
+
+    if (arrayLength < 2) { return inArray[0]; }
+
+    if (arrayLength == 3) {
+      int[] anotherArray = sortSorted(inArray[0], inArray[1]);
+      return sortSorted(anotherArray, inArray[2]);
+    }
+
+    int[][] newArray = new int[arrayLength / 2][];
+
+    for (int i = 0, j = 0; i < newArray.length; i++, j+=2) {
+      newArray[i] = sortSorted(inArray[j], inArray[j+1]);
+    }
+    return mergeSort(newArray);
+
   }
 
 }
