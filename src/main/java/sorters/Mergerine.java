@@ -1,6 +1,6 @@
-import java.util.Arrays;
+package sorters;
 
-public class Sorter {
+public class Mergerine {
 
   public static int[] sortSorted(int[] firstArray, int[] secondArray) {
 
