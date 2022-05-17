@@ -5,12 +5,7 @@ import sparta.com.mc.interfaces.AnSorter;
 public class MergerineSort implements AnSorter {
 
   @Override
-  public int[] sort(int[] sortThis) {
-    return mergerine(sortThis);
-  }
-
-
-  private int[] mergerine(int[] toSort) {
+  public int[] sort(int[] toSort) {
     if (toSort.length < 1) { return toSort; }
 
     int toSortLength = toSort.length;
@@ -20,12 +15,7 @@ public class MergerineSort implements AnSorter {
 
     for (int i = 0; i < toSortLength; i++) { splitArray[i][0] = toSort[i]; }
 
-    System.out.println(splitArray.length);
-
-    int[] blah = mergeSort(splitArray);
-    System.out.println(blah.length);
-
-    return blah;
+    return mergeSort(splitArray);
   }
 
 

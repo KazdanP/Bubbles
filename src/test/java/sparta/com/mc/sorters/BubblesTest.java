@@ -1,14 +1,20 @@
 package sparta.com.mc.sorters;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 public class BubblesTest {
 
+  static BubblesSort bs;
+
+  @BeforeAll
+  static void makeBubbleSorter() {
+    bs = new BubblesSort();
+  }
+
   @Test
   void bubbleSortTest() {
-    BubblesSort bs = new BubblesSort();
-
     int[] intsIWannaSort = {5, 4, 87, 3, 2, 34, 56, 34};
     int[] expectedSorted = {2, 3, 4, 5, 34, 34, 56, 87};
 
@@ -19,8 +25,6 @@ public class BubblesTest {
 
   @Test
   void bubbleSortTestTwo() {
-    BubblesSort bs = new BubblesSort();
-
     int[] intsIWannaSort = {45, 654, 78, 234, 1, 1, 1, 12312, 43};
     int[] expectedSorted = {1, 1, 1, 43, 45, 78, 234, 654, 12312};
 
@@ -31,8 +35,6 @@ public class BubblesTest {
 
   @Test
   void bubbleSortTestThree() {
-    BubblesSort bs = new BubblesSort();
-
     int[] intsIWannaSort = {};
     int[] expectedSorted = {};
 
@@ -43,8 +45,6 @@ public class BubblesTest {
 
   @Test
   void bubbleSortTestFour() {
-    BubblesSort bs = new BubblesSort();
-
     int[] intsIWannaSort = {63,93,9,13,13,16,93,79,16,90,50,92,72,97,2,54,37,33,89,42,1,11,43,24,0,82,54,94,44,40,
             1,68,95,95,43,33,9,24,14,85,76,18,38,79,37,71,66,12,2,94,63,81,1,81,70,64,39,73,32,42,70,63,85,87,58,
             65,63,72,62,6,57,72,93,2,66,92,98,3,93,40,31,66,15,87,26,49,82,41,33,6,81,33,0,54,81,32,89,70,36,90,
@@ -112,8 +112,6 @@ public class BubblesTest {
 
   @Test
   void bubbleSortTestFive() {
-    BubblesSort bs = new BubblesSort();
-
     int[] intsIWannaSort = {0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,
             3,3,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,9,9,9,9,9,9,9,
             9,9,9,9,9,9,9,10,10,10,10,10,10,10,10,10,10,11,11,11,11,11,11,11,11,11,12,12,12,12,12,12,12,12,12,12,
@@ -181,8 +179,6 @@ public class BubblesTest {
 
   @Test
   void bubbleSortTestSix() {
-    BubblesSort bs = new BubblesSort();
-
     int[] intsIWannaSort = {0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,
             3,3,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,9,9,9,9,9,9,9,
             9,9,9,9,9,9,9,10,10,10,10,10,10,10,10,10,10,11,11,11,11,11,11,11,11,11,12,12,12,12,12,12,12,12,12,12,

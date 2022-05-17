@@ -1,14 +1,18 @@
 package sparta.com.mc.sorters;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 public class MergerineTest {
 
+  static MergerineSort ms;
+
+  @BeforeAll
+  static void makeMergerineSort() { ms = new MergerineSort(); }
+
   @Test
   void mergeTestOne() {
-    MergerineSort ms = new MergerineSort();
-
     int[] thisNeedsSorting = {4, 6, 7, 3, 2, 8, 54,3};
     int[] expectedSorted = {2, 3, 3, 4, 6, 7, 8, 54};
 
@@ -19,8 +23,6 @@ public class MergerineTest {
 
   @Test
   void mergeTestTwo() {
-    MergerineSort ms = new MergerineSort();
-
     int[] thisNeedsSorting = {45, 74, 82, 834, 35, 2, 7, 68, 900, 24, 12, 22};
     int[] expectedSorted = {2, 7, 12, 22, 24, 35, 45, 68, 74, 82, 834, 900};
 
@@ -31,8 +33,6 @@ public class MergerineTest {
 
   @Test
   void mergeTestThree() {
-    MergerineSort ms = new MergerineSort();
-
     int[] thisNeedsSorting = {};
     int[] expectedSorted = {};
 
@@ -43,8 +43,6 @@ public class MergerineTest {
 
   @Test
   void mergeTestFour() {
-    MergerineSort ms = new MergerineSort();
-
     int[] thisNeedsSorting = {63,93,9,13,13,16,93,79,16,90,50,92,72,97,2,54,37,33,89,42,1,11,43,24,0,82,54,94,44,40,
             1,68,95,95,43,33,9,24,14,85,76,18,38,79,37,71,66,12,2,94,63,81,1,81,70,64,39,73,32,42,70,63,85,87,58,
             65,63,72,62,6,57,72,93,2,66,92,98,3,93,40,31,66,15,87,26,49,82,41,33,6,81,33,0,54,81,32,89,70,36,90,
@@ -112,8 +110,6 @@ public class MergerineTest {
 
   @Test
   void mergeTestFive() {
-    MergerineSort ms = new MergerineSort();
-
     int[] thisNeedsSorting = {0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,
             3,3,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,9,9,9,9,9,9,9,
             9,9,9,9,9,9,9,10,10,10,10,10,10,10,10,10,10,11,11,11,11,11,11,11,11,11,12,12,12,12,12,12,12,12,12,12,

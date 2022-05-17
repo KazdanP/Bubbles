@@ -7,20 +7,17 @@ class SortSorted {
     int combinedLength = firstArray.length + secondArray.length;
     int[] combinedArray = new int[combinedLength];
 
-    int firstCounter = 0;
-    int secondCounter = 0;
+    for (int i = 0, count1 = 0, count2 = 0; i < combinedLength; i++) {
 
-    for (int i = 0; i < combinedLength; i++) {
-
-      if (secondCounter == secondArray.length) {
-        combinedArray[i] = firstArray[firstCounter];
-        firstCounter++;
-      } else if ((firstCounter == firstArray.length) || (firstArray[firstCounter] > secondArray[secondCounter])) {
-        combinedArray[i] = secondArray[secondCounter];
-        secondCounter++;
+      if (count2 == secondArray.length) {
+        combinedArray[i] = firstArray[count1];
+        count1++;
+      } else if ((count1 == firstArray.length) || (firstArray[count1] > secondArray[count2])) {
+        combinedArray[i] = secondArray[count2];
+        count2++;
       } else {
-        combinedArray[i] = firstArray[firstCounter];
-        firstCounter++;
+        combinedArray[i] = firstArray[count1];
+        count1++;
       }
     }
 
