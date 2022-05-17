@@ -2,7 +2,12 @@ package sparta.com.mc.sorters;
 
 import sparta.com.mc.interfaces.AnSorter;
 
-public class TreetSort implements AnSorter {
+public class TreetSorter implements AnSorter {
+
+  @Override
+  public String toString() {
+    return "Tree Sort";
+  }
 
   @Override
   public int[] sort(int[] sortThis) { return new int[0]; }

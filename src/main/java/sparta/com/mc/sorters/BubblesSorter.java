@@ -2,7 +2,12 @@ package sparta.com.mc.sorters;
 
 import sparta.com.mc.interfaces.AnSorter;
 
-public class BubblesSort implements AnSorter {
+public class BubblesSorter implements AnSorter {
+
+  @Override
+  public String toString() {
+    return "Bubble Sort";
+  }
 
   @Override
   public int[] sort(int[] sortThis) {

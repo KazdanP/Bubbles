@@ -2,7 +2,12 @@ package sparta.com.mc.sorters;
 
 import sparta.com.mc.interfaces.AnSorter;
 
-public class MergerineSort implements AnSorter {
+public class MergerineSorter implements AnSorter {
+
+  @Override
+  public String toString() {
+    return "Mergerine Sort";
+  }
 
   @Override
   public int[] sort(int[] toSort) {
