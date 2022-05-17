@@ -1,10 +1,16 @@
-package sorters;
+package sparta.com.mc.sorters;
 
-public class Bubbles {
+import sparta.com.mc.interfaces.AnSorter;
 
-  public static int[] bubbles(int[] toSort) {
+public class BubblesSort implements AnSorter {
 
-    int runCounter = 1;
+  @Override
+  public int[] sort(int[] sortThis) {
+    return bubbles(sortThis);
+  }
+
+  private int[] bubbles(int[] toSort) {
+
     boolean swapped;
 
     for (int j = 0; j <= toSort.length; j++) {
@@ -21,13 +27,11 @@ public class Bubbles {
           swapped = true;
         }
 
-        runCounter++;
       }
+
       //Checks if nothing has been swapped i.e. already in the correct order
       if (!swapped) { break; }
     }
-
-    System.out.println("Times ran: " + runCounter);
 
     return toSort;
   }
