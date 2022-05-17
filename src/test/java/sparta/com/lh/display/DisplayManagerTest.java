@@ -1,8 +1,8 @@
-package sparta.com.mc.display;
+package sparta.com.lh.display;
 
 import org.junit.jupiter.api.Test;
-import sparta.com.mc.interfaces.AnSorter;
-import sparta.com.mc.sorters.*;
+import sparta.com.lh.interfaces.AnSorter;
+import sparta.com.lh.sorters.*;
 
 public class DisplayManagerTest {
 

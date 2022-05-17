@@ -1,4 +1,4 @@
-package sparta.com.mc.sorters;
+package sparta.com.lh.sorters;
 
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;

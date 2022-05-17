@@ -1,4 +1,4 @@
-package sparta.com.mc.interfaces;
+package sparta.com.lh.interfaces;
 
 public interface AnSorter {
   int[] sort(int[] arrayToSort);

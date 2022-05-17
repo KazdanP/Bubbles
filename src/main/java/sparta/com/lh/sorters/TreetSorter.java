@@ -1,6 +1,6 @@
-package sparta.com.mc.sorters;
+package sparta.com.lh.sorters;
 
-import sparta.com.mc.interfaces.AnSorter;
+import sparta.com.lh.interfaces.AnSorter;
 
 public class TreetSorter implements AnSorter {
 

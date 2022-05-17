@@ -1,6 +1,6 @@
-package sparta.com.mc.display;
+package sparta.com.lh.display;
 
-import sparta.com.mc.interfaces.AnSorter;
+import sparta.com.lh.interfaces.AnSorter;
 import java.util.ArrayList;
 import java.util.Arrays;
 
