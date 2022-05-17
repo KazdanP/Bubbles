@@ -9,7 +9,7 @@ public class TreeTest {
   @Test
   @Disabled
   void treeTestOne() {
-    TreetSort ts = new TreetSort();
+    TreetSorter ts = new TreetSorter();
 
     int[] sortThisTreeOut = {};
     int[] expectedArray = {};
@@ -22,7 +22,7 @@ public class TreeTest {
   @Test
   @Disabled
   void treeTestTwo() {
-    TreetSort ts = new TreetSort();
+    TreetSorter ts = new TreetSorter();
 
     int[] sortThisTreeOut = {4, 6, 7, 3, 2, 8, 54,3};
     int[] expectedArray = {2, 3, 3, 4, 6, 7, 8, 54};
@@ -35,7 +35,7 @@ public class TreeTest {
   @Test
   @Disabled
   void treeTestThree() {
-    TreetSort ts = new TreetSort();
+    TreetSorter ts = new TreetSorter();
 
     int[] sortThisTreeOut = {45, 74, 82, 834, 35, 2, 7, 68, 900, 24, 12, 22};
     int[] expectedArray = {2, 7, 12, 22, 24, 35, 45, 68, 74, 82, 834, 900};
@@ -48,7 +48,7 @@ public class TreeTest {
   @Test
   @Disabled
   void treeTestFour() {
-    TreetSort ts = new TreetSort();
+    TreetSorter ts = new TreetSorter();
 
     int[] sortThisTreeOut = {0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,
             3,3,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,9,9,9,9,9,9,9,
@@ -118,7 +118,7 @@ public class TreeTest {
   @Test
   @Disabled
   void treeTestFive() {
-    TreetSort ts = new TreetSort();
+    TreetSorter ts = new TreetSorter();
 
     int[] sortThisTreeOut = {63,93,9,13,13,16,93,79,16,90,50,92,72,97,2,54,37,33,89,42,1,11,43,24,0,82,54,94,44,40,
             1,68,95,95,43,33,9,24,14,85,76,18,38,79,37,71,66,12,2,94,63,81,1,81,70,64,39,73,32,42,70,63,85,87,58,

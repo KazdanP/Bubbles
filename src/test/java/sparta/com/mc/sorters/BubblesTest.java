@@ -6,11 +6,11 @@ import static org.assertj.core.api.Assertions.*;
 
 public class BubblesTest {
 
-  static BubblesSort bs;
+  static BubblesSorter bs;
 
   @BeforeAll
   static void makeBubbleSorter() {
-    bs = new BubblesSort();
+    bs = new BubblesSorter();
   }
 
   @Test

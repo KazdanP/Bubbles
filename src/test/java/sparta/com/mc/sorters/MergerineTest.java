@@ -6,10 +6,10 @@ import static org.assertj.core.api.Assertions.*;
 
 public class MergerineTest {
 
-  static MergerineSort ms;
+  static MergerineSorter ms;
 
   @BeforeAll
-  static void makeMergerineSort() { ms = new MergerineSort(); }
+  static void makeMergerineSort() { ms = new MergerineSorter(); }
 
   @Test
   void mergeTestOne() {
