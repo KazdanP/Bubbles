@@ -8,7 +8,7 @@ public class DisplayManagerTest {
 
   @Test
   void printBeforeBubbleSortTest() {
-    AnSorter sorter = new BubblesSort();
+    AnSorter sorter = new BubblesSorter();
     int[] intsIWannaSort = {45, 654, 78, 234, 1, 1, 1, 12312, 43};
 
     DisplayManager.printBeforeSort(sorter, intsIWannaSort);
@@ -18,7 +18,7 @@ public class DisplayManagerTest {
 
   @Test
   void printBeforeMergeSortTest() {
-    AnSorter sorter = new MergerineSort();
+    AnSorter sorter = new MergerineSorter();
     int[] intsIWannaSort = {45, 654, 78, 234, 1, 1, 1, 12312, 43};
 
     DisplayManager.printBeforeSort(sorter, intsIWannaSort);
