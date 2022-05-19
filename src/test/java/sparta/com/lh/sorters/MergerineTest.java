@@ -32,6 +32,16 @@ public class MergerineTest {
   }
 
   @Test
+  void mergeTestTwenty() {
+    int[] thisNeedsSorting = {69, 28, 51, 17, 27, 10, 6, 24, 67, 91, 90, 4, 93, 99, 42, 52, 51, 84, 86, 76};
+    int[] expectedSorted = {4, 6, 10, 17, 24, 27, 28, 42, 51, 51, 52, 67,  69, 76, 84, 86, 90, 91, 93, 99};
+
+    int[] actualSorted = ms.sort(thisNeedsSorting);
+
+    assertThat(actualSorted).isEqualTo(expectedSorted);
+  }
+
+  @Test
   void mergeTestThree() {
     int[] thisNeedsSorting = {};
     int[] expectedSorted = {};
